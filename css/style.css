@@ -1,3 +1,12 @@
+:root {
+  --color-cyan: #00e0f3;
+}
+
+body {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 .layout {
   width: 90%;
   max-width: 1100px;
@@ -6,4 +15,91 @@
 
 .layout-padding {
   padding: 5rem 0;
+}
+
+/* SECTION PROFILE */
+#profile {
+  background-color: #222;
+  color: white;
+}
+
+.profile {
+  text-align: center;
+}
+
+.profile h2 {
+  font-size: 2em;
+  color: var(--color-cyan);
+}
+
+.cards {
+  margin-top: 2rem;
+}
+
+.card__img {
+  position: relative;
+}
+
+.card__caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.5em;
+}
+
+.card__caption h3 {
+  font-size: 2rem;
+  color: var(--color-cyan);
+}
+
+.card__year {
+  font-size: 0.8rem;
+}
+
+.card__caption {
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  pointer-events: none;
+
+  transition: transform 200ms ease, opacity 100ms ease;
+}
+
+.card__img:hover .card__caption {
+  opacity: 1;
+  transform: scaleY(1);
+  pointer-events: initial;
+  transition: transform 100ms ease, opacity 50ms ease;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+}
+
+.card {
+  flex-basis: 100%;
+}
+
+@media (min-width: 600px) {
+  .card {
+    flex-basis: calc(100% / 2 - 2em);
+  }
+}
+
+@media (min-width: 900px) {
+  .card {
+    flex-basis: calc(100% / 3 - 2em);
+  }
 }
