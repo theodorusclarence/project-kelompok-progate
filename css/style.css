@@ -1,5 +1,6 @@
 :root {
   --color-cyan: #00e0f3;
+  --color-gray-200: #e5e7eb;
   --spacing: 0.5em;
 }
 
@@ -128,7 +129,6 @@ header {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.6);
 
   display: flex;
   flex-direction: column;
@@ -136,6 +136,20 @@ header {
   justify-content: center;
 
   padding: 0.5em;
+}
+
+.card__captwrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 50ms ease;
+}
+
+.card__img:hover .card__captwrap {
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .card__caption h3 {
@@ -155,6 +169,7 @@ header {
   pointer-events: none;
 
   transition: transform 200ms ease, opacity 100ms ease;
+  transition-delay: 50ms;
 }
 
 .card__img:hover .card__caption {
@@ -175,6 +190,16 @@ header {
   flex-basis: 100%;
 }
 
+.card__social {
+  font-size: 1.5rem;
+  margin-top: 0.2em;
+  transition: color 0.2s ease;
+}
+
+.card__social:hover {
+  color: var(--color-cyan);
+}
+
 @media (min-width: 600px) {
   .card {
     flex-basis: calc(100% / 2 - 2em);
@@ -188,3 +213,72 @@ header {
 }
 
 /* //* =========================== END SECTION PROFILE  ========================= */
+
+/* //* =========================== FOOTER  ========================= */
+
+footer {
+  position: relative;
+  width: 100%;
+  background: #a09168;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer .social_icon,
+footer .menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+footer .social_icon li,
+footer .menu li {
+  list-style: none;
+}
+
+footer .social_icon li a {
+  font-size: 1.4rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+footer .social_icon li:hover {
+  transform: translateY(-10);
+}
+
+footer .menu li a {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  text-decoration: none;
+  opacity: 0.75;
+  transition: opacity 0.2s ease;
+}
+
+footer .menu li a:hover {
+  opacity: 1;
+}
+
+footer .copyright {
+  font-size: 0.9rem;
+  color: var(--color-gray-200);
+}
+
+footer p {
+  color: #fff;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+/* //* =========================== END FOOTER  ========================= */
