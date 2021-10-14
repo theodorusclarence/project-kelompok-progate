@@ -30,7 +30,7 @@ body {
 
 /* //* =========================== HEADER  ========================= */
 
-header {
+.header_nav {
   /* height: 65px; */
   width: 100%;
   background-color: rgba(34, 49, 52, 0.9);
@@ -96,6 +96,56 @@ header {
   }
   .header-right {
     float: right;
+  }
+}
+
+header {
+  background-image: url(/images/hero.jpg);
+  background-size: cover;
+  color: white;
+}
+
+.hero {
+  min-height: calc(100vh - 84px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  font-size: 1.5rem;
+}
+
+.typewriter h1 {
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.1em;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
   }
 }
 /* //* =========================== END HEADER  ========================= */
