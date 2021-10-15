@@ -119,13 +119,20 @@ header {
   align-items: center;
   justify-content: center;
 }
-
 .hero h1 {
-  font-size: 3rem;
+  font-size: 1.6rem;
+}
+.hero p {
+  text-align: center;
 }
 
-.hero p {
-  font-size: 1.5rem;
+@media (min-width: 600px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+  .hero p {
+    font-size: 1.5rem;
+  }
 }
 
 .typewriter h1 {
