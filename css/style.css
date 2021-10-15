@@ -157,6 +157,54 @@ header {
 }
 /* //* =========================== END HEADER  ========================= */
 
+.running-text {
+  background: linear-gradient(-50deg, #ee5952, #ea3a7e, #20aadb, #23e0b3);
+  animation: 5s ease infinite;
+  animation-direction: reverse;
+  display: block;
+  margin: auto;
+  color: white;
+}
+/* //* =========================== SECTION LEARNING  ========================= */
+.learning {
+  color: white;
+  text-align: center;
+  --spacing: 2em;
+}
+
+.learning h2 {
+  font-size: 2rem;
+}
+
+.learn__cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+
+.learn > * + * {
+  margin-top: 0.5em;
+}
+
+.learn {
+  flex-basis: 100%;
+}
+
+@media (min-width: 600px) {
+  .learn {
+    flex-basis: calc(100% / 2 - 2em);
+  }
+}
+
+@media (min-width: 900px) {
+  .learn {
+    flex-basis: calc(100% / 4 - 2em);
+  }
+}
+/* //* =========================== END SECTION LEARNING  ========================= */
+
 /* //* =========================== SECTION PROFILE  ========================= */
 #profile {
   background-color: #222;
@@ -276,7 +324,7 @@ header {
 footer {
   position: relative;
   width: 100%;
-  background: #a09168;
+  background: #023b3f;
   min-height: 100px;
   padding: 20px 50px;
   display: flex;
